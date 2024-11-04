@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>W3.CSS Template, porém, alterei</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./W3.CSS Template_files/w3.css">
+<link rel="stylesheet" href="./W3.CSS Template_files/css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Etec Pedro D'Arcádia Neto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./W3.CSS Template_files/w3.css">
+<link rel="stylesheet" href="./W3.CSS Template_files/css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+/* Estilos para a caixa flutuante */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 1100px; /* Define um tamanho máximo para a modal */
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaa;
+  float: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Ajusta a largura da modal em telas menores */
+  }
+}
+/* Estilos para as colunas responsivas */
+.wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para as colunas individuais */
+.wp-block-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 200px; /* Adapta a largura conforme necessário */
+  margin: 10px;
+  max-width: 300px;
+}
+
+/* Estilos para os ícones e títulos */
+.wp-block-cps-botao-icone {
+  margin: 20px; /* ajuste o valor conforme necessário */
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+svg {
+  width: 50px; /* ajuste o valor conforme necessário */
+  height: 50px; /* ajuste o valor conforme necessário */
+}
+
+.icon-box h3 {
+  text-align: center;
+}
+
+.icon-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os ícones se movam para a próxima linha */
+            justify-content: center; /* Centraliza os ícones */
+            margin: 0 auto; /* Centraliza o contêiner */
+        }
+
+.icon-box {
+            flex: 1 1 200px; /* Crescer e encolher com largura base de 200px */
+            margin: 10px; /* Espaçamento entre os ícones */
+            text-align: center; /* Centraliza o texto e o ícone */
+            max-width: 300px; /* Largura máxima para telas maiores */
+            background: #fff; /* Fundo branco para os ícones */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            padding: 20px; /* Espaçamento interno */
+        }
+
+        .icon-svg {
+            font-size: 24px; /* Tamanho do SVG */
+            color: #000; /* Cor do ícone */
+            padding: 2px; /* Preenchimento ao redor do ícone */
+        }
+
+        /* Consulta de mídia para telas menores */
+        @media (max-width: 600px) {
+            .icon-box {
+                flex: 1 1 100%; /* Largura total em telas menores */
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+</style>
+</head>
+<body>
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        
+        <div class="w3-container">
+            <img src="./W3.CSS Template_files/etex.jpg" alt="Descrição da Imagem" style="width: 100%; height: auto; margin-bottom: 50px;">
+        </div>
+        
+        <div class="w3-bar-block">
+            <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+            <a href="#Cursos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cursos</a> 
+            <a href="#Área do Aluno" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Área do Aluno</a> 
+            <a href="#Vestibulinho Etec" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vestibulinho Etec</a>
+            <a href="#Fale com a Etec" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fale com a Etec</a>
+        </div>
+    </nav>
+      
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Pedro D'Arcádia Neto</span>
+</header>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <div class="w3-container" style="text-align: center; margin-top:80px" id="showcase"><h2>
+    <b>Bem Vindo!!!</h2></b><br><h1 style="text-align: center;color:red"><a>Conheça nossa escola!!!</a></h1>
+        <hr style="width:50px;border:5px solid rgb(255, 0, 0)" class="w3-round">
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://github.com/OlharZen/Template/blob/main/template/W3.CSS%20Template_files/kitchenconcrete.jpg?raw=true" style="width:100%" onclick="onClick(this)" alt="Fachada da Escola - Etec Pedro D’Arcádia Neto">
+      <img src="./W3.CSS Template_files/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Salas climatizadas e com telas interativas">
+      <img src="./W3.CSS Template_files/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="Entrada da Secretaria - Etec Pedro D’Arcádia Neto">
+    </div>
+    <div class="w3-half">
+      <img src="./W3.CSS Template_files/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Frente da escola - Etec Pedro D’Arcádia Neto">
+      <img src="./W3.CSS Template_files/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Pátio amplo">
+      <img src="./W3.CSS Template_files/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Vista panorâmica - Etec Pedro D’Arcádia Neto">
+    </div>
+  </div>
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display=&#39;none&#39;">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <div class="w3-container" id="Cursos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Cursos.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Estes são os cursos oferecidos pela Etec Etec Pedro D’Arcádia Neto</p>
+    <p></p>
+    <p><b>Cursos do Ensino Médio com Habilitação Profissional Técnica :
+    </b><p></p>
+      Ensino Médio – Habilitação Profissional de Técnico em Administração
+      <br>
+      Ensino Médio – Habilitação Profissional de Técnico em Informática para Internet
+      <br>
+      Ensino Médio – Habilitação Profissional de Técnico em Mecânica
+      <br>
+      Ensino Médio – Habilitação Profissional de Técnico em Química
+     <p></p><b>
+      Cursos do Ensino Médio com Itinerário Formativo :
+    </b><br>
+      Ensino Médio – Itinerário Formativo de Ciências Humanas e Sociais Aplicadas
+      <br>
+      Ensino Médio – Itinerário Formativo de Ciências da Natureza e suas Tecnologias
+      <br>
+      Ensino Médio – Itinerário Formativo de Matemática e suas Tecnologias
+      <p></p>
+      <p></p>
+      <br><b>
+      Cursos Técnicos :
+    </b><br><p></p>
+      
+      Técnico em Açúcar e Álcool
+      <br>
+      Técnico em Administração
+      <br>
+      Técnico em Contabilidade
+      <br><b>
+        <b onclick="showModal()">
+            Técnico em Desenvolvimento de Sistemas
+            </b>
+      
+      <!-- Modal que aparece ao clicar na linha -->
+      <div id="infoModal" class="modal" onclick="closeOnOutsideClick(event)">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>O Técnico em Desenvolvimento de Sistemas é o profissional que desenvolve sistemas computacionais utilizando ambientes de desenvolvimento e linguagens de programação específica. Auxilia no dimensionamento de requisitos e funcionalidades em projetos de sistemas. Realiza testes funcionais de programas de computador e aplicativos. Executa manutenção de programas de computador. Modela, implementa e mantém bancos de dados. Se destaca no ambiente em que trabalha por ser capaz de se integrar em equipes, analisar os recursos empregados em suas tarefas, buscar melhorias incrementais em instrumentos e formas de trabalho, com objetivo de otimizar tarefas e recursos materiais.</p>
+          <p><b>Mercado de Trabalho:</b><br>
+          Empresas e departamentos de desenvolvimento de sistemas em organizações governamentais e não governamentais, podendo também atuar com profissional autônomo.</p>
+          <p><b>Coordenação:</b><br>
+          Nádia Sakae Habu<br>
+          Unidade Sede (Assis)</p>
+        </div>
+      </div>
+      <br></b>
+      Técnico em Enfermagem
+      <br>
+      Técnico em Farmácia
+      <br>
+      Técnico em Manutenção de Máquinas Pesadas
+      <br>
+      Técnico em Marketing
+      <br>
+      Técnico em Mecânica
+      <br>
+      Técnico em Meio Ambiente
+      <br>
+      Técnico em Química
+      <br>
+      Técnico em Recursos Humanos
+      <br>
+      Cursos de Especializações Técnicas:
+      <br>
+      Especialização Técnica em Cálculos Trabalhistas
+<p><br></p>
+<p></p>
+Cursos Técnico e Especialização a Distância (EaD) Online:
+<br><p></p>
+O Centro Paula Souza possui diversos cursos na modalidade a distância (EaD) Online e, para ingressar nestes cursos, deve-se realizar o processo seletivo – Vestibulinho.
+<br>
+Para maiores informações, acesse o website do Grupo de Estudo Educação a Distância (GEEAD), do Centro Paula Souza.
+<br>
+<a href="https://portalgeead.cps.sp.gov.br/" onclick="w3_close()" class=".w3-dropdown-content">Acesse aqui</a>
+    </p>
+  </div>
+
+  <div class="w3-container" id="Área do Aluno" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Área do Aluno.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="cps-principal">
+                
+        
+        <div class="cps-container">
+            <div class="cps-texto-conteudo" style="max-width:833.2px;">
+          
+                <h1 class="title-interna">Área do Aluno</h1>
+
+                <span class="divisor-interna"></span>
+
+                
+        <p>A sessão <strong>Área do Aluno</strong> tem como objetivo compartilhar de maneira fácil e rápida diversos arquivos e informações de interesse ao corpo discente de nossa Unidade.</p>
+        
+        
+        
+        <p>Em caso de dúvidas quanto ao conteúdo desta sessão, procure a Coordenação de seu curso ou a Secretaria Acadêmica para mais informações.</p>
+        
+        
+        
+        <p>Para navegar através da Área do Aluno, utilize os botões abaixo:</p>
+        
+        
+        
+        <div class="icon-container">
+            <div class="icon-box">
+                <a href="https://etecassis.cps.sp.gov.br/aluno/tutoriais/" target="_blank">
+                    <div class="icon-svg">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M256 504c136.967 0 248-111.033 248-248S392.967 8 256 8 8 119.033 8 256s111.033 248 248 248zm-103.398-76.72l53.411-53.411c31.806 13.506 68.128 13.522 99.974 0l53.411 53.411c-63.217 38.319-143.579 38.319-206.796 0zM336 256c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zm91.28 103.398l-53.411-53.411c13.505-31.806 13.522-68.128 0-99.974l53.411-53.411c38.319 63.217 38.319 143.579 0 206.796zM359.397 84.72l-53.411 53.411c-31.806-13.505-68.128-13.522-99.973 0L152.602 84.72c63.217-38.319 143.579-38.319 206.795 0zM84.72 152.602l53.411 53.411c-13.506 31.806-13.522 68.128 0 99.974L84.72 359.398c-38.319-63.217-38.319-143.579 0-206.796z"></path>
+                        </svg>
+                    </div>
+                    <h3>Guias e<br>Tutoriais</h3>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://etecassis.cps.sp.gov.br/aluno/saida/" target="_blank">
+                    <div class="icon-svg">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M561.938 158.06L417.94 14.092C387.926-15.922 336 5.097 336 48.032v57.198c-42.45 1.88-84.03 6.55-120.76 17.99-35.17 10.95-63.07 27.58-82.91 49.42C108.22 199.2 96 232.6 96 271.94c0 61.697 33.178 112.455 84.87 144.76 37.546 23.508 85.248-12.651 71.02-55.74-15.515-47.119-17.156-70.923 84.11-78.76V336c0 42.993 51.968 63.913 81.94 33.94l143.998-144c18.75-18.74 18.75-49.14 0-67.88zM384 336V232.16C255.309 234.082 166.492 255.35 206.31 376 176.79 357.55 144 324.08 144 271.94c0-109.334 129.14-118.947 240-119.85V48l144 144-144 144zm24.74 84.493a82.658 82.658 0 0 0 20.974-9.303c7.976-4.952 18.286.826 18.286 10.214V464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h132c6.627 0 12 5.373 12 12v4.486c0 4.917-2.987 9.369-7.569 11.152-13.702 5.331-26.396 11.537-38.05 18.585a12.138 12.138 0 0 1-6.28 1.777H54a6 6 0 0 0-6 6v340a6 6 0 0 0 6 6h340a6 6 0 0 0 6-6v-25.966c0-5.37 3.579-10.059 8.74-11.541z"></path>
+                        </svg>
+                    </div>
+                    <h3>Autorização de<br>Saída Antecipada</h3>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://bit.ly/drivealunos095" target="_blank">
+                    <div class="icon-svg">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M640 329.3c0 65.9-52.5 114.4-117.5 114.4-165.9 0-196.6-249.7-359.7-249.7-146.9 0-147.1 212.2 5.6 212.2 42.5 0 90.9-17.8 125.3-42.5 5.6-4.1 16.9-16.3 22.8-16.3s10.9 5 10.9 10.9c0 7.8-13.1 19.1-18.7 24.1-40.9 35.6-100.3 61.2-154.7 61.2-83.4.1-154-59-154-144.9s67.5-149.1 152.8-149.1c185.3 0 222.5 245.9 361.9 245.9 99.3 0 154.4-30.9 154.4-89.6s-33.7-62.3-65.6-62.3c-34.6 0-63.7 30.1-63.7 62.2 0 16.7 9.3 29.1 23.8 29.1s32.1-18.6 32.1-38.4c0-21.6-14.8-30.9-33.8-30.9-36.5 0-65.6 29.1-65.6 65.8 0 48.5 20.3 65.9 66.7 65.9 26.7 0 66.5-10.1 66.5-38.8s-43.9-21.2-43.9-34.5c0-12.8 12.1-17.4 23.6-17.4s24.4 4.6 24.4 15.4z"></path>
+                        </svg>
+                    </div>
+                    <h3>Drive Alunos</h3>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://etecassis.cps.sp.gov.br/conselhos-profissionais/" target="_blank">
+                    <div class="icon-svg" style="font-size:24px;color:#000;padding:2px">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"></path>
+                        </svg>
+                    </div>
+                    <h3>Conselhos<br>Profissionais</h3>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://etecassis.cps.sp.gov.br/manual-do-aluno/" target="_blank">
+                    <div class="icon-svg" style="font-size:24px;color:#000;padding:2px">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M560.02 32c-1.96 0-3.98.37-5.96 1.16L384.01 96H384L212 35.28A64.252 64.252 0 0 0 191.76 32c-6.69 0-13.37 1.05-19.81 3.14L20.12 87.95A32.006 32.006 0 0 0 0 117.66v346.32C0 473.17 7.53 480 15.99 480c1.96 0 3.97-.37 5.96-1.16L192 416l172 60.71a63.98 63.98 0 0 0 40.05.15l151.83-52.81A31.996 31.996 0 0 0 576 394.34V48.02c0-9.19-7.53-16.02-15.98-16.02zM224 90.42l128 45.19v285.97l-128-45.19V90.42zM48 418.05V129.07l128-44.53v286.2l-.64.23L48 418.05zm480-35.13l-128 44.53V141.26l.64-.24L528 93.95v288.97z"></path>
+                        </svg>
+                    </div>
+                    <h3>Manual do<br>Aluno</h3>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://nsa.cps.sp.gov.br/" target="_blank">
+                    <div class="icon-svg" style="font-size:24px;color:#000;padding:2px">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M155.3 154.6c0-22.3 18.6-30.9 48.4-30.9 43.4 0 98.5 13.3 141.9 36.7V26.1C298.3 7.2 251.1 0 203.8 0 88.1 0 11 60.4 11 161.4c0 157.9 216.8 132.3 216.8 200.4 0 26.4-22.9 34.9-54.7 34.9-47.2 0-108.2-19.5-156.1-45.5v128.5a396.09 396.09 0 0 0 156 32.4c118.6 0 200.3-51 200.3-153.6 0-170.2-218-139.7-218-203.9z"></path>
+                        </svg>
+                    </div>
+                    <h3>Portal<br>NSA Online</h3>
+                </a>
+            </div>
+        </div>
+    
+
+
+  <div class="w3-container" id="Vestibulinho Etec" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Vestibulinho Etec.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="cps-texto-conteudo">
+      <div class="cabecalho-secao">
+          
+          <!-- TÍTULO -->
+          <h1 class="title-interna"></h1>
+          <!-- /TÍTULO -->
+          
+                      
+          <!-- RESUMO -->
+          <span class="resumo-noticia-interna"><p>Foi divulgado pelo Centro Paula Souza o Processo Seletivo – Vestibulinho – para o ano de 2025 para todas as Etecs do Estado de São Paulo.</p>
+</span>
+          <!-- /RESUMO -->
+          
+          <!-- DIVISOR -->
+          <span class="divisor-interna"></span>
+          <!-- /DIVISOR -->
+          
+      </div>
+      <!-- /DATA E CATEGORIAS -->
+      
+      <!-- IMAGEM -->
+      <div class="img-destaque-post">
+          <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/35/2024/10/header-post-vestibulinho25.png" style="width:100%;">
+                  </div>
+      <!-- /IMAGEM -->
+      
+      <!-- TEXTO E TAGS -->
+      
+<p>Foi divulgado pelo Centro Paula Souza o Processo Seletivo – <a href="https://www.vestibulinhoetec.com.br/calendario/" target="_blank" rel="noreferrer noopener">Vestibulinho</a> – para o ano de 2025 para todas as Etecs do Estado de São Paulo.</p>
+
+
+
+<p>Os interessados poderão realizar suas inscrições do dia <strong>31 de outubro até as 15h00 do dia 26 de novembro de 2024</strong>, exclusivamente pelo <em>website </em><a href="http://www.vestibulinhoetec.com.br" target="_blank" rel="noreferrer noopener"><strong>www.vestibulinhoetec.com.br</strong></a> e o valor da taxa de inscrição é de R$39,85.</p>
+
+
+
+<p>A Etec Pedro D’Arcádia Neto estará com vagas disponíveis para o Ensino Médio e Técnico (confira abaixo).</p>
+
+
+
+<p>O exame ocorrerá no domingo, dia <strong>15 de dezembro, às 13h30</strong>. O local da prova será divulgado em momento oportuno, conforme calendário do processo seletivo.</p>
+
+<p>É de extrema importância que o candidato realize a leitura criteriosa do Edital do Processo Seletivo e do Manual do Candidato para que possa exaurir todas as dúvidas referente ao Vestibulinho Etec.</p>
+
+<p>Não deixe a oportunidade de realizar um curso gratuito e de qualidade passar. Realize sua inscrição e se prepare para o mercado de trabalho com a Etec.</p>
+
+<div class="cabecalho-secao">   
+  <h2>Cursos Disponibilizados</h2>
+  <span class="divisor-interna" style="margin-bottom:0"></span>
+</div>
+
+<p>Confira abaixo os cursos disponíveis na Etec Pedro D’Arcádia Neto, de Assis, para o ano de 2025:</p>
+
+<figure class="wp-block-table is-style-stripes has-medium-font-size"><table><tbody><tr><td><strong>Ensino Médio <strong>(Unidade Sede – Assis)</strong><br></strong>Ensino Médio com Habilitação Profissional de Técnico em Administração <em>(manhã – 40 vagas)</em><br>Ensino Médio com Habilitação Profissional de Técnico em Mecânica <em>(manhã – 40 vagas)</em><br>Ensino Médio com Habilitação Profissional de Técnico em Química <em>(manhã – 40 vagas)</em><br></td></tr><tr><td><strong>Ensino Técnico (Unidade Sede – Assis)<sup>1</sup></strong><br>Habilitação Profissional de Técnico em Administração <em>(noite – 40 vagas)</em><br>Habilitação Profissional de Técnico em Contabilidade <em>(noite – 40 vagas)</em><br>Habilitação Profissional de Técnico em Desenvolvimento de Sistemas <em>(noite – 40 vagas)</em><br>Habilitação Profissional de Técnico em Enfermagem<sup><strong>2</strong></sup> <em>(manhã – 40 vagas)</em><br>Habilitação Profissional de Técnico em Mecânica <em>(noite – 40 vagas)</em><br>Habilitação Profissional de Técnico em Química <em>(noite – 30 vagas)</em><br></td></tr><tr><td><strong>Ensino Técnico (Unidade Descentralizada – Tarumã)<sup>1</sup><br></strong>Habilitação Profissional de Técnico em Açúcar e Álcool <em>(noite – 40 vagas)</em><br></td></tr><tr><td><strong><strong>Ensino Técnico (</strong>Ensino à Distância – EAD <em>Online</em>)<sup>3</sup><br></strong>Habilitação Profissional de Técnico em Guia de Turismo <em>(2 módulos – 660 vagas)</em><br>Especialização Técnica em Gestão de Projeto <em>(1 módulo – 920 vagas)</em><br></td></tr><tr><td><strong>Ensino Técnico (Acesso a Vagas Remanescentes – 2º Módulo)<br></strong>Habilitação Profissional de Técnico em Administração <em>(noite – Unidade Assis)</em><br>Habilitação Profissional de Técnico em Mecânica <em>(noite – Unidade Assis)</em><br></td></tr></tbody></table></figure>
+
+<p style="font-size:10px"><sup>(1) </sup>Candidatos das Habilitações Profissionais Técnicas devem possuir o Ensino Médio completo ou comprovar a matrícula na 2ª ou 3ª séries do Ensino Médio no ato da realização da matrícula.<br><sup>(2)</sup> Candidatos da Habilitação Profissional de Técnico em Enfermagem devem ter 18 (dezoito) anos ou mais no ato da realização da matrícula.<br><sup>(3)</sup> Cursos Técnicos à Distância (EAD <em>Online</em>) são administrados pelo CPS-GEEAD e não pela Unidade de Ensino Local. O número de vagas para cada curso desta modalidade deve ser conferido no Edital do Processo Seletivo e/ou Manual do Candidato.</p>
+
+<p></p>
+<div class="conteudo__tags">
+<a class="cps-texto-conteudo__tags" href="https://etecassis.cps.sp.gov.br/tag/ensino-medio/" target="_blank" rel="noreferrer noopener">Ensino Médio</a>
+<a class="cps-texto-conteudo__tags" href="https://etecassis.cps.sp.gov.br/tag/ensino-tecnico/" target="_blank" rel="noreferrer noopener">Ensino Técnico</a>
+<a class="cps-texto-conteudo__tags" href="https://etecassis.cps.sp.gov.br/tag/vestibulinho/" target="_blank" rel="noreferrer noopener">Vestibulinho</a>
+</div>
+    <div class="w3-container" id="Fale com a Etec" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Fale com a Etec.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+<p></p>
+    <a href="https://forms.office.com/pages/responsepage.aspx?id=bEY47UG2fUOa6dgBuCn6lJaGCjesC4xOnQrguBz9BSxUMzJRQ1kyQlAxTFpRMlhOMU9SV1NTQ0hVSS4u&route=shorturl" onclick="w3_close()" class=".w3-dropdown-content">Entre em contato conosco clicando aqui</a>
+    <br>
+    <p></p>
+    <a href="https://api.whatsapp.com/send/?phone=551833223941&text=via+website.&type=phone_number&app_absent=0" onclick="w3_close()" class=".w3-dropdown-content">Ou pelo whatsapp</a>
+    <br>
+    <p></p><p></p>
+    <br>
+      <div>
+          <span><h2>Etec Pedro D’Arcádia Neto</h1>Rua Senhor do Bonfim, 1226 - Vila Xavier - Assis/SP - CEP: 19802-130</span>
+          <br>
+          <p></p>
+          <span><h6>Telefone:</h6> +55 18 3302-4600</span>
+          <br>
+          <p></p>
+          <span><h6>Horário de funcionamento:</h6> Seg. a Sex.  das 08h às 12h,  13h às 17h e das 19h às 21h</span>
+      </div>
+  </div>
+    </form>  
+  </div>
+</div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px; padding-right:58px; display: flex; align-items: center;">
+    <img src="./W3.CSS Template_files/cps.png" alt="CPS" style="width: 200px; height: auto; margin-right: 200px;">
+    <p class="w3-right">Powered by <a href="https://github.com/OlharZen/" title="DNS" target="_blank" class="w3-hover-opacity" style="height: auto; text-align: right">Dennis Miranda</a></p>
+</div>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+// Função para mostrar a caixa flutuante
+function showModal() {
+    document.getElementById('infoModal').style.display = 'block';
+  }
+
+  // Função para fechar a caixa flutuante
+  function closeModal() {
+    document.getElementById('infoModal').style.display = 'none';
+  }
+
+  // Função para fechar a caixa flutuante ao clicar fora dela
+  function closeOnOutsideClick(event) {
+    if (event.target == document.getElementById('infoModal')) {
+      closeModal();
+    }
+  }
+</script>
+ 
+</body>
+</html>
